@@ -1,0 +1,20 @@
+import { promises as fs } from "fs";
+import { locatePackageJson } from "./locate-package-json";
+
+/**
+ * @internal
+ */
+export interface PkgJson {
+	peerDependencies?: Record<string, string>;
+}
+
+/**
+ * @internal
+ */
+export async function readPackageJson(pkgFile?: string): Promise<PkgJson> {
+	if (!pkgFile) {
+		pkgFile = await locatePackageJson();
+	}
+	const content = await fs.readFile(pkgFile, "utf-8");
+	return JSON.parse(content) as PkgJson;
+}

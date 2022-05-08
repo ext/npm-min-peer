@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "rootDir": "./src",
+    "noEmit": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es2017"],
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "es2017",
+    "strict": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "**/__mocks__"]
+}

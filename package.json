@@ -1,0 +1,88 @@
+{
+  "name": "npm-min-peer",
+  "version": "0.0.0",
+  "description": "Get minimum version required by a peerDependency",
+  "keywords": [
+    "ci",
+    "matrix",
+    "peerDependency",
+    "npm"
+  ],
+  "homepage": "https://github.com/ext/npm-min-peer",
+  "bugs": {
+    "url": "https://github.com/ext/npm-min-peer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ext/npm-min-peer.git"
+  },
+  "license": "MIT",
+  "author": "David Sveningsson <ext@sidvind.com>",
+  "main": "dist/index.js",
+  "bin": "bin/index.js",
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "tsc",
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node14.0 --external:./package.json --analyze --sourcemap --outdir=dist",
+    "postbuild": "dts-bundle-generator -o dist/index.d.ts src/index.ts",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint --fix .",
+    "prepack": "release-prepack package.json --bundle",
+    "postpack": "release-postpack package.json",
+    "prepare": "husky install",
+    "prepublishOnly": "release-prepublish package.json --bundle",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "postpublish": "release-postpublish package.json",
+    "self-test": "node bin/index.js",
+    "test": "jest"
+  },
+  "commitlint": {
+    "extends": "@html-validate"
+  },
+  "lint-staged": {
+    "*.{ts,js,json,md}": "prettier --write"
+  },
+  "prettier": "@html-validate/prettier-config",
+  "jest": {
+    "preset": "@html-validate/jest-config"
+  },
+  "dependencies": {
+    "argparse": "2.0.1",
+    "find-up": "5.0.0",
+    "semver": "7.3.7"
+  },
+  "devDependencies": {
+    "@html-validate/commitlint-config": "2.1.10",
+    "@html-validate/eslint-config": "5.4.5",
+    "@html-validate/eslint-config-jest": "5.4.5",
+    "@html-validate/eslint-config-typescript": "5.4.5",
+    "@html-validate/eslint-config-typescript-typeinfo": "^5.4.1",
+    "@html-validate/jest-config": "3.3.1",
+    "@html-validate/prettier-config": "2.1.0",
+    "@html-validate/release-scripts": "^3.4.1",
+    "@types/argparse": "2.0.10",
+    "@types/jest": "27.5.0",
+    "@types/node": "14.18.16",
+    "@types/semver": "7.3.9",
+    "dts-bundle-generator": "6.9.0",
+    "esbuild": "0.14.38",
+    "husky": "7.0.4",
+    "jest": "28.1.0",
+    "lint-staged": "12.4.1",
+    "prettier": "2.6.2",
+    "ts-jest": "28.0.1",
+    "typescript": "4.6.4"
+  },
+  "engines": {
+    "node": ">= 14.0"
+  },
+  "renovate": {
+    "extends": [
+      "gitlab>html-validate/renovate-config"
+    ]
+  }
+}
