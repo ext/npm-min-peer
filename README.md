@@ -18,11 +18,11 @@ Use `--version` to see package version.
 Use `--major` to specify which major version to use when finding the minumum.
 Major can be specified using any of the following formats:
 
-  - `1`
-  - `"1"`
-  - `"1.x"`
-  - `"v1"`
-  - `"v1.x"`
+- `1`
+- `"1"`
+- `"1.x"`
+- `"v1"`
+- `"v1.x"`
 
 Use `--with-name` to include the package name in output.
 
