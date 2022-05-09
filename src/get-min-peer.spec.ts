@@ -65,6 +65,24 @@ describe("should constrain to given major", () => {
 	});
 });
 
+describe("should handle different major formats", () => {
+	it.each([
+		["1 (number)", 1],
+		["1 (string)", "1"],
+		["1.x", "1.x"],
+		["v1", "v1"],
+		["v1.x", "v1.x"],
+	])("%s", async (_, major) => {
+		expect.assertions(1);
+		readPackageJson.mockResolvedValue({
+			peerDependencies: {
+				foo: "^1.3.2",
+			},
+		});
+		expect(await getMinPeer("foo", { major })).toBe("1.3.2");
+	});
+});
+
 describe("should throw error when", () => {
 	it("peerDependencies is not defined", async () => {
 		expect.assertions(1);
