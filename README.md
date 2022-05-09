@@ -55,8 +55,8 @@ jobs:
     steps:
       - name: Install dependencies
         run: npm ci
-      - name: Install my-fancy-dependency v${version}
-        run: npm install --no-save $(npx npm-min-peer my-fancy-dependency --major ${VERSION} --with-name)
+      - name: Install my-fancy-dependency v${matrix.version}
+        run: npm install --no-save $(npx npm-min-peer my-fancy-dependency --major ${matrix.version} --with-name)
       - name: Run tests
         run: npm test
 ```
