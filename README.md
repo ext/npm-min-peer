@@ -55,8 +55,8 @@ jobs:
     steps:
       - name: Install dependencies
         run: npm ci
-      - name: Install my-fancy-dependency v${matrix.version}
-        run: npm install --no-save $(npx npm-min-peer my-fancy-dependency --major ${matrix.version} --with-name)
+      - name: Install my-fancy-dependency v${{ matrix.version }}
+        run: npm install --no-save $(npx -y npm-min-peer my-fancy-dependency --major ${{ matrix.version }} --with-name)
       - name: Run tests
         run: npm test
 ```
@@ -70,7 +70,7 @@ my-fancy-dependency:
       - VERSION: [3, 4, 5]
   before_script:
     - npm ci
-    - npm install --no-save $(npx npm-min-peer my-fancy-dependency --major ${VERSION} --with-name)
+    - npm install --no-save $(npx -y npm-min-peer my-fancy-dependency --major ${VERSION} --with-name)
   script:
     - npm test
 ```
