@@ -70,7 +70,7 @@
     "@types/semver": "7.3.9",
     "dts-bundle-generator": "6.9.0",
     "esbuild": "0.14.38",
-    "husky": "7.0.4",
+    "husky": "8.0.1",
     "jest": "28.1.0",
     "lint-staged": "12.4.1",
     "prettier": "2.6.2",
