@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "argparse": "2.0.1",
-    "find-up": "5.0.0",
+    "find-up": "6.3.0",
     "semver": "7.3.7"
   },
   "devDependencies": {
