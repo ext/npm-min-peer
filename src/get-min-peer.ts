@@ -36,7 +36,7 @@ export async function getMinPeer(pkgName: string, options: Options = {}): Promis
 		throw new Error(`"peerDependencies" not defined in "package.json"`);
 	}
 
-	const expression = peerDependencies[pkgName]; // eslint-disable-line security/detect-object-injection
+	const expression = peerDependencies[pkgName];
 	if (typeof expression === "undefined") {
 		throw new Error(`"${pkgName}" is not listed in "peerDependencies" in "package.json"`);
 	}

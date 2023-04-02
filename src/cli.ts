@@ -1,7 +1,7 @@
 import { ArgumentParser } from "argparse";
 import { getMinPeer } from "./get-min-peer";
 
-/* eslint-disable-next-line @typescript-eslint/no-var-requires */
+/* eslint-disable-next-line @typescript-eslint/no-var-requires -- technical debt, should be replaced with fs.readfile */
 const { version, description } = require("../package.json") as {
 	version: string;
 	description: string;
@@ -32,6 +32,6 @@ export async function cli(argv: string[]): Promise<number> {
 
 	const args = parser.parse_args(argv) as Args;
 	const result = await getMinPeer(args.pkgName, args);
-	console.log(result); // eslint-disable-line no-console
+	console.log(result); // eslint-disable-line no-console -- expected to log
 	return 0;
 }
