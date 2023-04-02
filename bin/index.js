@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 
-/* eslint-disable no-process-exit, no-console */
+/* eslint-disable no-console -- cli tool, expected to log */
 
 const { cli } = require("../dist");
 
-cli(process.argv.slice(2))
-	.then((exitCode) => process.exit(exitCode))
+const argv = process.argv.slice(2);
+cli(argv)
+	.then((exitCode) => {
+		process.exitCode = exitCode;
+	})
 	.catch((err) => {
 		console.error(err);
-		process.exit(1);
+		process.exitCode = 1;
 	});
