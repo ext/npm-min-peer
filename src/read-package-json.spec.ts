@@ -43,6 +43,6 @@ it("should throw error if file does not exist", async () => {
 	expect.assertions(1);
 	const filePath = "missing.json";
 	await expect(() => readPackageJson(filePath)).rejects.toThrowErrorMatchingInlineSnapshot(
-		`"ENOENT: no such file or directory, open 'missing.json'"`
+		`"ENOENT: no such file or directory, open 'missing.json'"`,
 	);
 });

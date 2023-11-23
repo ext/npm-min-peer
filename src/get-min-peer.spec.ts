@@ -88,7 +88,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({});
 		await expect(() => getMinPeer("foo")).rejects.toThrowErrorMatchingInlineSnapshot(
-			`""peerDependencies" not defined in "package.json""`
+			`""peerDependencies" not defined in "package.json""`,
 		);
 	});
 
@@ -96,7 +96,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({ peerDependencies: {} });
 		await expect(() => getMinPeer("foo")).rejects.toThrowErrorMatchingInlineSnapshot(
-			`""foo" is not listed in "peerDependencies" in "package.json""`
+			`""foo" is not listed in "peerDependencies" in "package.json""`,
 		);
 	});
 
@@ -104,7 +104,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({ peerDependencies: { foo: ">4 <3" } });
 		await expect(() => getMinPeer("foo")).rejects.toThrowErrorMatchingInlineSnapshot(
-			`"No version could be found for ">4 <3""`
+			`"No version could be found for ">4 <3""`,
 		);
 	});
 
@@ -112,7 +112,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({ peerDependencies: { foo: "bar" } });
 		await expect(() => getMinPeer("foo")).rejects.toThrowErrorMatchingInlineSnapshot(
-			`"No version could be found for "bar""`
+			`"No version could be found for "bar""`,
 		);
 	});
 
@@ -120,7 +120,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({ peerDependencies: { foo: "^1" } });
 		await expect(() => getMinPeer("foo", { major: 2 })).rejects.toThrowErrorMatchingInlineSnapshot(
-			`"No version could be found for "^1" that matches major "2""`
+			`"No version could be found for "^1" that matches major "2""`,
 		);
 	});
 });
