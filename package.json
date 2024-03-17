@@ -53,7 +53,7 @@
     "semver": "7.6.0"
   },
   "devDependencies": {
-    "@html-validate/commitlint-config": "3.2.0",
+    "@html-validate/commitlint-config": "3.2.1",
     "@html-validate/eslint-config": "5.13.2",
     "@html-validate/eslint-config-jest": "5.13.2",
     "@html-validate/eslint-config-typescript": "5.13.1",
