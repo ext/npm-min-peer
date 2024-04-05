@@ -1,5 +1,20 @@
 # npm-min-peer changelog
 
+## 3.0.0 (2024-04-05)
+
+### ⚠ BREAKING CHANGES
+
+- **deps:** require nodejs v18 or later
+
+### Features
+
+- **deps:** require nodejs v18 or later ([3189949](https://github.com/ext/npm-min-peer/commit/3189949404cd1e4eb2c5884da6998ea2cc304630))
+- **deps:** update dependency find-up to v7 ([2a60f6c](https://github.com/ext/npm-min-peer/commit/2a60f6c9cd0144a59a971b40e2bcc8a6fbe06804))
+
+### Bug Fixes
+
+- **deps:** update dependency semver to v7.6.0 ([79abb2e](https://github.com/ext/npm-min-peer/commit/79abb2e5d25575214abe888c20bb295b73faa028))
+
 ## [2.0.0](https://github.com/ext/npm-min-peer/compare/v1.0.0...v2.0.0) (2023-08-15)
 
 ### ⚠ BREAKING CHANGES
