@@ -56,11 +56,13 @@ export async function getMinPeer(pkgName: string, options: Options = {}): Promis
 	}
 
 	for (const range of expression.split("||")) {
-		const result = minVersion(`${range.trim()} ^${major}`);
+		const result = minVersion(`${range.trim()} ^${String(major)}`);
 		if (result) {
 			return formatResult(pkgName, result.version, options);
 		}
 	}
 
-	throw new Error(`No version could be found for "${expression}" that matches major "${major}"`);
+	throw new Error(
+		`No version could be found for "${expression}" that matches major "${String(major)}"`,
+	);
 }
