@@ -2,11 +2,14 @@ import { locatePackageJson } from "./locate-package-json";
 
 let mockResult: string | undefined = undefined;
 
-jest.mock("find-up", () =>
-	jest.fn().mockImplementation(() => {
-		return Promise.resolve(mockResult);
-	}),
-);
+jest.mock("find-up", () => {
+	return {
+		__esModule: true,
+		findUp: jest.fn().mockImplementation(() => {
+			return Promise.resolve(mockResult);
+		}),
+	};
+});
 
 beforeEach(() => {
 	mockResult = undefined;
