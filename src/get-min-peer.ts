@@ -46,7 +46,7 @@ export async function getMinPeer(pkgName: string, options: Options = {}): Promis
 		let result;
 		try {
 			result = minVersion(expression);
-		} catch (err) {
+		} catch {
 			throw new Error(`No version could be found for "${expression}"`);
 		}
 		if (!result) {

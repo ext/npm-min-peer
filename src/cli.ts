@@ -1,7 +1,7 @@
 import { ArgumentParser } from "argparse";
 import { getMinPeer } from "./get-min-peer";
 
-/* eslint-disable-next-line @typescript-eslint/no-var-requires -- technical debt, should be replaced with fs.readfile */
+/* eslint-disable-next-line @typescript-eslint/no-require-imports -- technical debt, should be replaced with fs.readfile */
 const { version, description } = require("../package.json") as {
 	version: string;
 	description: string;
