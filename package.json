@@ -64,7 +64,7 @@
     "@html-validate/prettier-config": "2.5.5",
     "@html-validate/release-scripts": "6.6.0",
     "@types/argparse": "2.0.16",
-    "@types/jest": "29.5.12",
+    "@types/jest": "29.5.13",
     "@types/node": "18.19.50",
     "@types/semver": "7.5.8",
     "dts-bundle-generator": "9.5.1",
