@@ -1,5 +1,11 @@
 # npm-min-peer changelog
 
+## 3.0.4 (2025-01-31)
+
+### Bug Fixes
+
+- **deps:** update dependency semver to v7.7.0 ([9df8899](https://github.com/ext/npm-min-peer/commit/9df889911633629a76f5cf7c4469a25abe2f3e7b))
+
 ## 3.0.3 (2024-07-19)
 
 ### Bug Fixes
