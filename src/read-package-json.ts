@@ -12,9 +12,7 @@ export interface PkgJson {
  * @internal
  */
 export async function readPackageJson(pkgFile?: string): Promise<PkgJson> {
-	if (!pkgFile) {
-		pkgFile = await locatePackageJson();
-	}
+	pkgFile ??= await locatePackageJson();
 	const content = await fs.readFile(pkgFile, "utf-8");
 	return JSON.parse(content) as PkgJson;
 }
