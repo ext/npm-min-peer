@@ -65,7 +65,7 @@
     "@html-validate/release-scripts": "6.8.0",
     "@types/argparse": "2.0.17",
     "@types/jest": "29.5.14",
-    "@types/node": "18.19.87",
+    "@types/node": "18.19.96",
     "@types/semver": "7.7.0",
     "dts-bundle-generator": "9.5.1",
     "esbuild": "0.25.4",
