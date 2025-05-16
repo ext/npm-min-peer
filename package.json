@@ -1,6 +1,6 @@
 {
   "name": "npm-min-peer",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "Get minimum version required by a peerDependency",
   "keywords": [
     "ci",
