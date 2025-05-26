@@ -1,18 +1,11 @@
 {
+  "extends": ["@tsconfig/node20", "@tsconfig/strictest"],
   "compilerOptions": {
-    "alwaysStrict": true,
     "rootDir": "./src",
+    "outDir": "./dist",
     "noEmit": true,
     "declaration": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "lib": ["es2023"],
-    "module": "commonjs",
-    "noImplicitAny": true,
-    "outDir": "dist",
-    "sourceMap": true,
-    "target": "es2022",
-    "strict": true
+    "sourceMap": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "**/__mocks__"]
