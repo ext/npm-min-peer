@@ -1,5 +1,15 @@
 # npm-min-peer changelog
 
+## 4.0.0 (2025-05-26)
+
+### ⚠ BREAKING CHANGES
+
+- NodeJS v20 or later required
+
+### Features
+
+- require nodejs v20 or later ([d3ee856](https://github.com/ext/npm-min-peer/commit/d3ee8569bedb5d747435f5911507d98c6526399a))
+
 ## 3.0.6 (2025-05-16)
 
 ### Bug Fixes
