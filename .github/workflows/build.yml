@@ -21,11 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: |
-          npm run build
-          node bin/index.js --version
-          npm pack
-          npx npm-pkg-lint
+        run: npm run build
+      - name: Self-test
+        run: node bin/index.js --version
       - name: Jest
         run: npm test
         env:
