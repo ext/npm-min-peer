@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "prebuild": "tsc",
-    "build": "esbuild src/index.ts --bundle --platform=node --target=node18 --external:./package.json --analyze --sourcemap --outdir=dist",
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node20 --external:./package.json --analyze --sourcemap --outdir=dist",
     "postbuild": "dts-bundle-generator -o dist/index.d.ts src/index.ts",
     "eslint": "eslint --cache .",
     "eslint:fix": "eslint --cache --fix .",
@@ -65,7 +65,7 @@
     "@html-validate/release-scripts": "6.9.0",
     "@types/argparse": "2.0.17",
     "@types/jest": "29.5.14",
-    "@types/node": "18.19.103",
+    "@types/node": "20.17.50",
     "@types/semver": "7.7.0",
     "dts-bundle-generator": "9.5.1",
     "esbuild": "0.25.4",
@@ -76,7 +76,7 @@
     "typescript": "5.8.3"
   },
   "engines": {
-    "node": ">= 18"
+    "node": ">= 20"
   },
   "renovate": {
     "extends": [
