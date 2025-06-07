@@ -67,7 +67,7 @@
     "@tsconfig/strictest": "2.0.5",
     "@types/argparse": "2.0.17",
     "@types/jest": "29.5.14",
-    "@types/node": "20.17.58",
+    "@types/node": "20.19.0",
     "@types/semver": "7.7.0",
     "dts-bundle-generator": "9.5.1",
     "esbuild": "0.25.5",
