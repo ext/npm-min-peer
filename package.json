@@ -73,7 +73,7 @@
     "esbuild": "0.25.5",
     "husky": "9.1.7",
     "jest": "30.0.3",
-    "npm-pkg-lint": "4.0.0",
+    "npm-pkg-lint": "4.0.1",
     "ts-jest": "29.4.0",
     "typescript": "5.8.3"
   },
