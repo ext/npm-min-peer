@@ -70,7 +70,7 @@
     "@types/node": "20.19.10",
     "@types/semver": "7.7.0",
     "dts-bundle-generator": "9.5.1",
-    "esbuild": "0.25.8",
+    "esbuild": "0.25.9",
     "husky": "9.1.7",
     "jest": "30.0.5",
     "npm-pkg-lint": "4.0.2",
