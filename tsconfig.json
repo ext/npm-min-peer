@@ -4,8 +4,12 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "noEmit": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "esnext",
     "declaration": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "types": ["node", "jest"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "**/__mocks__"]

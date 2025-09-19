@@ -23,7 +23,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Self-test
-        run: node bin/index.js --version
+        run: node bin/index.mjs --version
       - name: Jest
         run: npm test
         env:
