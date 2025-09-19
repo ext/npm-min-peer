@@ -2,7 +2,7 @@
 
 /* eslint-disable no-console -- cli tool, expected to log */
 
-const { cli } = require("../dist");
+import { cli } from "../dist/index.mjs";
 
 const argv = process.argv.slice(2);
 cli(argv)
