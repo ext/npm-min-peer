@@ -82,7 +82,7 @@
     "jest": "30.2.0",
     "npm-pkg-lint": "4.1.1",
     "ts-jest": "29.4.4",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "engines": {
     "node": ">= 20.19"
