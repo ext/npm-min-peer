@@ -1,5 +1,12 @@
 # npm-min-peer changelog
 
+## 4.1.0 (2025-10-06)
+
+### Features
+
+- **deps:** update dependency find-up to v8 ([9a6baf5](https://github.com/ext/npm-min-peer/commit/9a6baf56dc09980005a415c9e645b9f5be838207))
+- migrate to esm ([fe147a8](https://github.com/ext/npm-min-peer/commit/fe147a8e344963f25182a39f9adb740eb4ebe141))
+
 ## 4.0.0 (2025-05-26)
 
 ### ⚠ BREAKING CHANGES
