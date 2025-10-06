@@ -1,9 +1,9 @@
-import commitAnalyzer from "@html-validate/semantic-release-config/lib/commit-analyzer";
-import releaseNotesGenerator from "@html-validate/semantic-release-config/lib/release-notes-generator";
-import npm from "@html-validate/semantic-release-config/lib/npm";
-import changelog from "@html-validate/semantic-release-config/lib/changelog";
-import exec from "@html-validate/semantic-release-config/lib/exec";
-import git from "@html-validate/semantic-release-config/lib/git";
+import commitAnalyzer from "@html-validate/semantic-release-config/lib/commit-analyzer.js";
+import releaseNotesGenerator from "@html-validate/semantic-release-config/lib/release-notes-generator.js";
+import npm from "@html-validate/semantic-release-config/lib/npm.js";
+import changelog from "@html-validate/semantic-release-config/lib/changelog.js";
+import exec from "@html-validate/semantic-release-config/lib/exec.js";
+import git from "@html-validate/semantic-release-config/lib/git.js";
 
 export default {
 	plugins: [
