@@ -9,7 +9,7 @@
     "target": "esnext",
     "declaration": true,
     "sourceMap": true,
-    "types": ["node", "jest"]
+    "types": ["node"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "**/__mocks__"]

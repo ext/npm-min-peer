@@ -1,9 +1,10 @@
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { getMinPeer } from "./get-min-peer";
 import * as readPackageJsonModule from "./read-package-json";
 
-jest.mock("./read-package-json");
+vi.mock(import("./read-package-json"));
 
-const readPackageJson = jest.spyOn(readPackageJsonModule, "readPackageJson");
+const readPackageJson = vi.spyOn(readPackageJsonModule, "readPackageJson");
 
 beforeEach(() => {
 	readPackageJson.mockClear();
@@ -43,7 +44,7 @@ it("should support passing filename to readPackageJson", async () => {
 		},
 	});
 	await getMinPeer("foo", { pkgFile: "my-file.json" });
-	expect(readPackageJson).toHaveBeenCalledWith("my-file.json");
+	expect(readPackageJson).toHaveBeenCalledExactlyOnceWith("my-file.json");
 });
 
 describe("should constrain to given major", () => {
@@ -88,7 +89,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({});
 		await expect(() => getMinPeer("foo")).rejects.toThrowErrorMatchingInlineSnapshot(
-			`""peerDependencies" not defined in "package.json""`,
+			`[Error: "peerDependencies" not defined in "package.json"]`,
 		);
 	});
 
@@ -96,7 +97,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({ peerDependencies: {} });
 		await expect(() => getMinPeer("foo")).rejects.toThrowErrorMatchingInlineSnapshot(
-			`""foo" is not listed in "peerDependencies" in "package.json""`,
+			`[Error: "foo" is not listed in "peerDependencies" in "package.json"]`,
 		);
 	});
 
@@ -104,7 +105,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({ peerDependencies: { foo: ">4 <3" } });
 		await expect(() => getMinPeer("foo")).rejects.toThrowErrorMatchingInlineSnapshot(
-			`"No version could be found for ">4 <3""`,
+			`[Error: No version could be found for ">4 <3"]`,
 		);
 	});
 
@@ -112,7 +113,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({ peerDependencies: { foo: "bar" } });
 		await expect(() => getMinPeer("foo")).rejects.toThrowErrorMatchingInlineSnapshot(
-			`"No version could be found for "bar""`,
+			`[Error: No version could be found for "bar"]`,
 		);
 	});
 
@@ -120,7 +121,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({ peerDependencies: { foo: "^1" } });
 		await expect(() => getMinPeer("foo", { major: 2 })).rejects.toThrowErrorMatchingInlineSnapshot(
-			`"No version could be found for "^1" that matches major "2""`,
+			`[Error: No version could be found for "^1" that matches major "2"]`,
 		);
 	});
 });

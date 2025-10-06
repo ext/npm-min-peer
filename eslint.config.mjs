@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import defaultConfig from "@html-validate/eslint-config";
 import typescriptConfig from "@html-validate/eslint-config-typescript";
 import typescriptTypeinfoConfig from "@html-validate/eslint-config-typescript-typeinfo";
-import jestConfig from "@html-validate/eslint-config-jest";
+import vitestConfig from "@html-validate/eslint-config-vitest";
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
@@ -27,7 +27,7 @@ export default [
 
 	{
 		name: "@html-validate/eslint-config-typescript",
-		files: ["**/*.ts"],
+		files: ["**/*.{ts,cts,mts}"],
 		...typescriptConfig,
 	},
 
@@ -38,16 +38,16 @@ export default [
 		languageOptions: {
 			parserOptions: {
 				tsconfigRootDir: rootDir,
-				project: ["./tsconfig.json"],
+				projectService: true,
 			},
 		},
 		...typescriptTypeinfoConfig,
 	},
 
 	{
-		name: "@html-validate/eslint-config-jest",
+		name: "@html-validate/eslint-config-vitest",
 		files: ["**/*.spec.[jt]s"],
 		ignores: ["cypress/**", "tests/e2e/**"],
-		...jestConfig,
+		...vitestConfig,
 	},
 ];

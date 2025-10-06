@@ -1,13 +1,11 @@
+import { beforeEach, expect, it, vi } from "vitest";
 import { locatePackageJson } from "./locate-package-json";
 
-let mockResult: string | undefined = undefined;
+let mockResult = vi.hoisted(() => undefined as string | undefined);
 
-jest.mock("find-up", () => {
+vi.mock(import("find-up"), () => {
 	return {
-		__esModule: true,
-		findUp: jest.fn().mockImplementation(() => {
-			return Promise.resolve(mockResult);
-		}),
+		findUp: vi.fn(() => Promise.resolve(mockResult)),
 	};
 });
 
@@ -25,6 +23,6 @@ it("should throw error if package.json couldn't be found", async () => {
 	expect.assertions(1);
 	mockResult = undefined;
 	await expect(() => locatePackageJson()).rejects.toThrowErrorMatchingInlineSnapshot(
-		`"Failed to locate package.json"`,
+		`[Error: Failed to locate package.json]`,
 	);
 });

@@ -1,10 +1,11 @@
 import path from "path";
+import { beforeEach, expect, it, vi } from "vitest";
 import { readPackageJson } from "./read-package-json";
 import * as locatePackageJsonModule from "./locate-package-json";
 
-jest.mock("./locate-package-json");
+vi.mock(import("./locate-package-json"));
 
-const locatePackageJson = jest.spyOn(locatePackageJsonModule, "locatePackageJson");
+const locatePackageJson = vi.spyOn(locatePackageJsonModule, "locatePackageJson");
 
 beforeEach(() => {
 	locatePackageJson.mockClear();
@@ -29,7 +30,7 @@ it("should locate package.json if no filename is given", async () => {
 	const filePath = path.join(__dirname, "__fixtures__", "default.json");
 	locatePackageJson.mockResolvedValue(filePath);
 	const result = await readPackageJson();
-	expect(locatePackageJson).toHaveBeenCalledWith();
+	expect(locatePackageJson).toHaveBeenCalledExactlyOnceWith();
 	expect(result).toMatchInlineSnapshot(`
 		{
 		  "name": "default",
@@ -43,6 +44,6 @@ it("should throw error if file does not exist", async () => {
 	expect.assertions(1);
 	const filePath = "missing.json";
 	await expect(() => readPackageJson(filePath)).rejects.toThrowErrorMatchingInlineSnapshot(
-		`"ENOENT: no such file or directory, open 'missing.json'"`,
+		`[Error: ENOENT: no such file or directory, open 'missing.json']`,
 	);
 });
