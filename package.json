@@ -55,7 +55,7 @@
   "prettier": "@html-validate/prettier-config",
   "dependencies": {
     "argparse": "2.0.1",
-    "find-up": "7.0.0",
+    "find-up": "8.0.0",
     "semver": "7.7.2"
   },
   "devDependencies": {
