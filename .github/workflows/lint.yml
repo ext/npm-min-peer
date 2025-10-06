@@ -21,6 +21,7 @@ jobs:
       - name: ESLint
         if: success() || failure()
         run: npm run eslint -- --max-warnings 0
+
   npm-pkg-lint:
     runs-on: ubuntu-latest
     steps:
