@@ -24,7 +24,7 @@ jobs:
         run: npm run build
       - name: Self-test
         run: node bin/index.mjs --version
-      - name: Jest
+      - name: Vitest
         run: npm test
         env:
           CI: true
