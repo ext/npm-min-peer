@@ -1,5 +1,5 @@
 import fs from "node:fs/promises";
-import { build, analyzeMetafile } from "esbuild";
+import { analyzeMetafile, build } from "esbuild";
 
 await fs.rm("dist", { recursive: true, force: true });
 
