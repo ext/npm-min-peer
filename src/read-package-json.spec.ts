@@ -1,7 +1,7 @@
-import path from "path";
+import path from "node:path";
 import { beforeEach, expect, it, vi } from "vitest";
-import { readPackageJson } from "./read-package-json";
 import * as locatePackageJsonModule from "./locate-package-json";
+import { readPackageJson } from "./read-package-json";
 
 vi.mock(import("./locate-package-json"));
 
