@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@html-validate/commitlint-config": "3.6.1",
-    "@html-validate/eslint-config": "6.10.0",
+    "@html-validate/eslint-config": "6.10.2",
     "@html-validate/eslint-config-typescript": "6.10.0",
     "@html-validate/eslint-config-typescript-typeinfo": "6.10.0",
     "@html-validate/eslint-config-vitest": "6.10.0",
