@@ -23,5 +23,4 @@ const result = await build({
 	},
 });
 
-/* eslint-disable-next-line no-console -- expected to log */
 console.log(await analyzeMetafile(result.metafile));
