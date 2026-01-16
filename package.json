@@ -73,7 +73,7 @@
     "@tsconfig/node20": "20.1.8",
     "@tsconfig/strictest": "2.0.8",
     "@types/argparse": "2.0.17",
-    "@types/node": "20.19.29",
+    "@types/node": "20.19.30",
     "@types/semver": "7.7.1",
     "@vitest/coverage-v8": "4.0.17",
     "dts-bundle-generator": "9.5.1",
