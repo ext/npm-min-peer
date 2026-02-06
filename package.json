@@ -60,7 +60,7 @@
   "dependencies": {
     "argparse": "2.0.1",
     "find-up": "8.0.0",
-    "semver": "7.7.3"
+    "semver": "7.7.4"
   },
   "devDependencies": {
     "@html-validate/commitlint-config": "3.6.5",
