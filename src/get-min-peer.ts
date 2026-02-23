@@ -37,8 +37,8 @@ export async function getMinPeer(pkgName: string, options: Options = {}): Promis
 	}
 
 	const expression = peerDependencies[pkgName];
-	if (typeof expression === "undefined") {
-		throw new Error(`"${pkgName}" is not listed in "peerDependencies" in "package.json"`);
+	if (expression === undefined) {
+		throw new TypeError(`"${pkgName}" is not listed in "peerDependencies" in "package.json"`);
 	}
 
 	const { major } = options;

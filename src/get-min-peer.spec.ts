@@ -97,7 +97,7 @@ describe("should throw error when", () => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({ peerDependencies: {} });
 		await expect(() => getMinPeer("foo")).rejects.toThrowErrorMatchingInlineSnapshot(
-			`[Error: "foo" is not listed in "peerDependencies" in "package.json"]`,
+			`[TypeError: "foo" is not listed in "peerDependencies" in "package.json"]`,
 		);
 	});
 
