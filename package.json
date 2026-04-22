@@ -75,13 +75,13 @@
     "@types/argparse": "2.0.17",
     "@types/node": "20.19.39",
     "@types/semver": "7.7.1",
-    "@vitest/coverage-v8": "4.1.4",
+    "@vitest/coverage-v8": "4.1.5",
     "dts-bundle-generator": "9.5.1",
     "esbuild": "0.28.0",
     "husky": "9.1.7",
     "npm-pkg-lint": "4.6.5",
     "typescript": "6.0.3",
-    "vitest": "4.1.4"
+    "vitest": "4.1.5"
   },
   "engines": {
     "node": "^20.19 || >= 22.16"
