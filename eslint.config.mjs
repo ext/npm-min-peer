@@ -46,12 +46,4 @@ export default [
 		ignores: ["cypress/**", "tests/e2e/**"],
 		...vitestConfig,
 	},
-
-	{
-		name: "local/semantic-release",
-		files: ["release.config.mjs"],
-		rules: {
-			"import-x/no-unresolved": "off",
-		},
-	},
 ];
