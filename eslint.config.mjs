@@ -51,7 +51,7 @@ export default [
 		name: "local/semantic-release",
 		files: ["release.config.mjs"],
 		rules: {
-			"import/no-unresolved": "off",
+			"import-x/no-unresolved": "off",
 		},
 	},
 ];
