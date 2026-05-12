@@ -1,5 +1,19 @@
 # npm-min-peer changelog
 
+## 5.0.0 (2026-05-12)
+
+### ⚠ BREAKING CHANGES
+
+- **deps:** require nodejs v22 or later
+
+### Features
+
+- **deps:** require nodejs v22 or later ([3d2e9fd](https://github.com/ext/npm-min-peer/commit/3d2e9fd51051997815e45609e8ab8096eeec5180))
+
+### Bug Fixes
+
+- **deps:** update dependency semver to v7.8.0 ([ea33003](https://github.com/ext/npm-min-peer/commit/ea33003fe265b5f868c5a7edd9fb459c77b37a2f))
+
 ## 4.1.2 (2026-02-13)
 
 ### Bug Fixes
