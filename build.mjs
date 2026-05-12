@@ -9,7 +9,7 @@ const result = await build({
 	bundle: true,
 	platform: "node",
 	format: "esm",
-	target: "node20.19",
+	target: "node22",
 	outExtension: { ".js": ".mjs" },
 	external: ["./package.json"],
 	logLevel: "info",
