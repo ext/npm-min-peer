@@ -1,5 +1,11 @@
 # npm-min-peer changelog
 
+## 5.0.4 (2026-06-11)
+
+### Bug Fixes
+
+- **deps:** update dependency semver to v7.8.4 ([90ff772](https://github.com/ext/npm-min-peer/commit/90ff7724a9a07f39398f1f1b10cf23a7c324cdab))
+
 ## 5.0.3 (2026-06-10)
 
 ### Bug Fixes
