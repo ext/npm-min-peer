@@ -89,5 +89,11 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
+  },
+  "allowScripts": {
+    "@html-validate/commitlint-config": true,
+    "esbuild": true,
+    "fsevents": false,
+    "unrs-resolver": true
   }
 }
