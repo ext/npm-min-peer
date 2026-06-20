@@ -18,9 +18,8 @@ export interface Options {
 function formatResult(pkgName: string, version: string, options: Options): string {
 	if (options.withName) {
 		return `${pkgName}@${version}`;
-	} else {
-		return version;
 	}
+	return version;
 }
 
 /**
