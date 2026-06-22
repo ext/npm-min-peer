@@ -7,19 +7,7 @@ import typescriptTypeinfoConfig from "@html-validate/eslint-config-typescript-ty
 import vitestConfig from "@html-validate/eslint-config-vitest";
 
 export default [
-	{
-		name: "Ignored files",
-		ignores: [
-			"**/coverage/**",
-			"**/dist/**",
-			"**/node_modules/**",
-			"**/out/**",
-			"**/public/assets/**",
-			"**/temp/**",
-		],
-	},
-
-	...defaultConfig,
+	...defaultConfig({ type: "module" }),
 
 	{
 		name: "@html-validate/eslint-config-typescript",
