@@ -1,5 +1,11 @@
 # npm-min-peer changelog
 
+## 5.1.0 (2026-07-17)
+
+### Features
+
+- **deps:** use native `parseArgs()` instead of `argparse` dependency ([6fed6e4](https://github.com/ext/npm-min-peer/commit/6fed6e40a7263b7d8558b12687113b09a69a5909))
+
 ## 5.0.5 (2026-06-20)
 
 ### Bug Fixes
