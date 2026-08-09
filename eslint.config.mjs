@@ -3,35 +3,15 @@
 
 import defaultConfig from "@html-validate/eslint-config";
 import typescriptConfig from "@html-validate/eslint-config-typescript";
-import typescriptTypeinfoConfig from "@html-validate/eslint-config-typescript-typeinfo";
+import typeinfoConfig from "@html-validate/eslint-config-typescript-typeinfo";
 import vitestConfig from "@html-validate/eslint-config-vitest";
 
 export default [
-	...defaultConfig({ type: "module" }),
+	...defaultConfig({
+		type: "module",
+	}),
 
-	{
-		name: "@html-validate/eslint-config-typescript",
-		files: ["**/*.{ts,cts,mts}"],
-		...typescriptConfig,
-	},
-
-	{
-		name: "@html-validate/eslint-config-typeinfo",
-		files: ["src/**/*.{ts,cts,mts}"],
-		ignores: ["src/**/*.spec.ts"],
-		languageOptions: {
-			parserOptions: {
-				tsconfigRootDir: import.meta.dirname,
-				projectService: true,
-			},
-		},
-		...typescriptTypeinfoConfig,
-	},
-
-	{
-		name: "@html-validate/eslint-config-vitest",
-		files: ["**/*.spec.[jt]s"],
-		ignores: ["cypress/**", "tests/e2e/**"],
-		...vitestConfig,
-	},
+	typescriptConfig(),
+	typeinfoConfig(import.meta.dirname),
+	vitestConfig(),
 ];
