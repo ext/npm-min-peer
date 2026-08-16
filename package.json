@@ -69,7 +69,7 @@
     "@html-validate/eslint-config-vitest": "9.17.6",
     "@html-validate/prettier-config": "4.1.11",
     "@html-validate/release-scripts": "7.6.0",
-    "@tsconfig/node22": "22.0.5",
+    "@tsconfig/node22": "22.0.6",
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "22.20.1",
     "@types/semver": "7.8.0",
