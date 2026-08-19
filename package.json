@@ -74,13 +74,13 @@
     "@types/node": "22.20.1",
     "@types/semver": "7.8.0",
     "@typescript/native": "npm:typescript@7.0.2",
-    "@vitest/coverage-v8": "4.1.10",
+    "@vitest/coverage-v8": "4.1.11",
     "dts-bundle-generator": "9.5.1",
     "esbuild": "0.28.2",
     "husky": "9.1.7",
     "npm-pkg-lint": "5.2.3",
     "typescript": "npm:@typescript/typescript6@6.0.2",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   },
   "engines": {
     "node": "^22.16.0 || >= 24.0.0"
