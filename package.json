@@ -71,7 +71,7 @@
     "@html-validate/release-scripts": "7.6.12",
     "@tsconfig/node22": "22.0.6",
     "@tsconfig/strictest": "2.0.8",
-    "@types/node": "22.20.3",
+    "@types/node": "22.20.4",
     "@types/semver": "7.8.0",
     "@typescript/native": "npm:typescript@7.0.2",
     "@vitest/coverage-v8": "5.0.1",
