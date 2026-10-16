@@ -53,6 +53,12 @@
     "self-test": "node bin/index.js",
     "test": "vitest run --coverage"
   },
+  "allowScripts": {
+    "@html-validate/commitlint-config": true,
+    "esbuild": true,
+    "fsevents": false,
+    "unrs-resolver": true
+  },
   "commitlint": {
     "extends": "@html-validate"
   },
@@ -67,7 +73,7 @@
     "@html-validate/eslint-config-typescript": "9.23.0",
     "@html-validate/eslint-config-typescript-typeinfo": "9.23.0",
     "@html-validate/eslint-config-vitest": "9.23.0",
-    "@html-validate/prettier-config": "4.1.16",
+    "@html-validate/prettier-config": "4.1.17",
     "@html-validate/release-scripts": "7.6.16",
     "@tsconfig/node22": "22.0.6",
     "@tsconfig/strictest": "2.0.8",
@@ -88,11 +94,5 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
-  },
-  "allowScripts": {
-    "@html-validate/commitlint-config": true,
-    "esbuild": true,
-    "fsevents": false,
-    "unrs-resolver": true
   }
 }
