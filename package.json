@@ -72,7 +72,7 @@
     "@html-validate/eslint-config": "9.23.4",
     "@html-validate/eslint-config-typescript": "9.23.5",
     "@html-validate/eslint-config-typescript-typeinfo": "9.23.5",
-    "@html-validate/eslint-config-vitest": "9.23.3",
+    "@html-validate/eslint-config-vitest": "9.23.6",
     "@html-validate/prettier-config": "4.1.17",
     "@html-validate/release-scripts": "7.6.17",
     "@tsconfig/node22": "22.0.6",
