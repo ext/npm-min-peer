@@ -65,7 +65,7 @@
   "prettier": "@html-validate/prettier-config",
   "dependencies": {
     "find-up": "8.0.0",
-    "semver": "7.8.5"
+    "semver": "7.8.6"
   },
   "devDependencies": {
     "@html-validate/commitlint-config": "4.3.3",
