@@ -74,7 +74,7 @@
     "@html-validate/eslint-config-typescript-typeinfo": "9.24.13",
     "@html-validate/eslint-config-vitest": "9.24.8",
     "@html-validate/prettier-config": "4.1.19",
-    "@html-validate/release-scripts": "7.6.17",
+    "@html-validate/release-scripts": "7.6.20",
     "@tsconfig/node22": "22.0.7",
     "@tsconfig/strictest": "2.0.9",
     "@types/node": "22.20.5",
