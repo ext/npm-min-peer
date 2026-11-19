@@ -1,5 +1,12 @@
 # npm-min-peer changelog
 
+## 5.1.2 (2026-11-19)
+
+### Bug Fixes
+
+- handle when `--major` is `0` ([9e54cf1](https://github.com/ext/npm-min-peer/commit/9e54cf1e37bbd8f769807d166d0cfc0e7368ba50)), closes [#131](https://github.com/ext/npm-min-peer/issues/131)
+- match each clause separately irregardless of order when multiple clauses match major version ([c512f7e](https://github.com/ext/npm-min-peer/commit/c512f7eea4b28244833682d6055210fd34c2d240)), closes [#131](https://github.com/ext/npm-min-peer/issues/131)
+
 ## 5.1.1 (2026-11-04)
 
 ### Bug Fixes
