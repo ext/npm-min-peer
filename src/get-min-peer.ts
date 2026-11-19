@@ -41,7 +41,7 @@ export async function getMinPeer(pkgName: string, options: Options = {}): Promis
 	}
 
 	const { major } = options;
-	if (!major) {
+	if (major === undefined) {
 		let result;
 		try {
 			result = minVersion(expression);

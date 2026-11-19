@@ -64,6 +64,18 @@ describe("should constrain to given major", () => {
 		});
 		expect(await getMinPeer("foo", { major })).toBe(result);
 	});
+
+	it("should treat numeric major zero as a constraint", async () => {
+		expect.assertions(1);
+		readPackageJson.mockResolvedValue({
+			peerDependencies: {
+				foo: "^1.0.0",
+			},
+		});
+		await expect(getMinPeer("foo", { major: 0 })).rejects.toThrow(
+			'No version could be found for "^1.0.0" that matches major "0"',
+		);
+	});
 });
 
 describe("should handle different major formats", () => {
