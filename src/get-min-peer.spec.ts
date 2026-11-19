@@ -55,6 +55,8 @@ describe("should constrain to given major", () => {
 		${"^2.1 || ^3"}       | ${"2"} | ${"2.1.0"}
 		${"^2.1 || ^3"}       | ${"3"} | ${"3.0.0"}
 		${">= 2.3 || >= 3.1"} | ${"3"} | ${"3.0.0"}
+		${">= 3.1 || >= 2.3"} | ${"3"} | ${"3.0.0"}
+		${"1.2.3 - 2.3.4"}    | ${"2"} | ${"2.0.0"}
 	`('"$range" with major "$major" should be "$result"', async ({ range, major, result }) => {
 		expect.assertions(1);
 		readPackageJson.mockResolvedValue({
