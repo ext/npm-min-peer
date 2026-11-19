@@ -1,3 +1,4 @@
+import Range from "semver/classes/range";
 import minVersion from "semver/ranges/min-version";
 import { readPackageJson } from "./read-package-json";
 
@@ -20,6 +21,27 @@ function formatResult(pkgName: string, version: string, options: Options): strin
 		return `${pkgName}@${version}`;
 	}
 	return version;
+}
+
+function minVersionForMajor(
+	expression: string,
+	major: string | number,
+): ReturnType<typeof minVersion> {
+	const peerRange = new Range(expression);
+	const majorRange = new Range(`^${String(major)}`);
+	let minResult: ReturnType<typeof minVersion> = null;
+	for (const peerComparators of peerRange.set) {
+		for (const majorComparators of majorRange.set) {
+			const comparators = [...peerComparators, ...majorComparators]
+				.map((comparator) => comparator.value)
+				.join(" ");
+			const result = minVersion(comparators);
+			if (result && (!minResult || result.compare(minResult) < 0)) {
+				minResult = result;
+			}
+		}
+	}
+	return minResult;
 }
 
 /**
@@ -54,11 +76,9 @@ export async function getMinPeer(pkgName: string, options: Options = {}): Promis
 		return formatResult(pkgName, result.version, options);
 	}
 
-	for (const range of expression.split("||")) {
-		const result = minVersion(`${range.trim()} ^${String(major)}`);
-		if (result) {
-			return formatResult(pkgName, result.version, options);
-		}
+	const result = minVersionForMajor(expression, major);
+	if (result) {
+		return formatResult(pkgName, result.version, options);
 	}
 
 	throw new Error(
